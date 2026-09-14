@@ -15,6 +15,7 @@
     --rose:#CFA7A0;
     --rose-soft:#E7D6D1;
     --orange:#C4633A;
+    --pink:#B76E79;
     --muted:#8A8380;
     --white:#FFFFFF;
   }
@@ -62,6 +63,8 @@
   .btn-primary:hover{ background:#D8754C; transform:translateY(-1px); }
   .btn-secondary{ background:transparent; color:var(--black); border:1px solid var(--black); }
   .btn-secondary:hover{ background:var(--black); color:var(--cream); }
+  .btn-pink{ background:var(--pink); color:var(--cream); }
+  .btn-pink:hover{ background:#A55F6A; transform:translateY(-1px); }
   .btn-row{ display:flex; gap:14px; flex-wrap:wrap; margin-top:28px; }
 
   /* ============ NAV ============ */
@@ -78,7 +81,9 @@
   .wordmark{
     font-family:'Fraunces', serif; font-weight:600; font-size:19px;
     text-decoration:none; color:var(--black);
+    display:flex; align-items:center;
   }
+  .wordmark img{ height:34px; width:auto; display:block; }
   .nav-links{ display:flex; align-items:center; gap:32px; }
   .nav-links a{
     text-decoration:none; font-size:14.5px; font-weight:500; color:var(--muted);
@@ -86,7 +91,6 @@
   }
   .nav-links a:hover{ color:var(--black); }
   .nav-links a.current{ color:var(--black); border-bottom-color:var(--orange); }
-  .nav-links .btn{ padding:11px 22px; font-size:14px; }
   .nav-toggle{ display:none; background:none; border:none; cursor:pointer; padding:8px; }
   .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after{
     display:block; width:22px; height:2px; background:var(--black); position:relative;
@@ -144,9 +148,9 @@
 
   /* ============ WHY IT MATTERS ============ */
   .why-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:32px; margin-top:64px; }
-  .why-item .icon{ width:34px; height:34px; margin-bottom:18px; color:var(--orange); }
-  .why-item h3{ font-size:17px; margin-bottom:8px; }
-  .why-item p{ font-size:14.5px; color:var(--muted); margin:0; line-height:1.6; }
+  .why-item .icon{ width:38px; height:38px; margin-bottom:20px; color:var(--orange); }
+  .why-item h3{ font-size:21px; margin-bottom:10px; }
+  .why-item p{ font-size:16.5px; color:var(--muted); margin:0; line-height:1.65; }
   @media (max-width:900px){ .why-grid{ grid-template-columns:repeat(2,1fr); } }
   @media (max-width:520px){ .why-grid{ grid-template-columns:1fr; } }
 
@@ -214,10 +218,10 @@
   .process h2{ font-size:clamp(26px,3.2vw,36px); margin-bottom:44px; }
   .process-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:32px; }
   .process-step .num{
-    font-family:'IBM Plex Mono', monospace; font-size:13px; color:var(--orange); margin-bottom:14px;
+    font-family:'IBM Plex Mono', monospace; font-size:14px; color:var(--orange); margin-bottom:16px;
   }
-  .process-step h3{ font-size:17px; margin-bottom:8px; }
-  .process-step p{ font-size:14.5px; color:var(--muted); margin:0; line-height:1.6; }
+  .process-step h3{ font-size:21px; margin-bottom:10px; }
+  .process-step p{ font-size:16.5px; color:var(--muted); margin:0; line-height:1.65; }
   @media (max-width:820px){ .process-grid{ grid-template-columns:1fr 1fr; row-gap:32px; } }
   @media (max-width:520px){ .process-grid{ grid-template-columns:1fr; } }
 
@@ -248,14 +252,14 @@
 ============================================================= -->
 <header class="nav">
   <div class="nav-inner">
-    <a href="#top" class="wordmark">Pink Hunny Lab</a>
+    <a href="#top" class="wordmark"><img src="assets/logo.png" alt="Pink Hunny Lab"></a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
     <nav class="nav-links" id="navLinks">
       <!-- A+ Content page isn't live yet at this URL — it will be once that repo (phl-a-plus-content) is built and published -->
       <a href="https://pinkhunnylab.github.io/phl-a-plus-content/">Amazon A+ Content</a>
       <a href="#top" class="current">Listing Images</a>
       <a href="https://pinkhunnylab.github.io/phl-video-landing/">Videos</a>
-      <a href="https://tidycal.com/1wego4j/amazon-listing-check" class="btn btn-primary">Book a consultation</a>
+      <a href="https://tidycal.com/1wego4j/amazon-listing-check" class="btn btn-pink">Book a consultation</a>
     </nav>
   </div>
 </header>
