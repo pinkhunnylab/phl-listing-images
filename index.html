@@ -235,22 +235,19 @@
   .pricing-card{
     max-width:640px; margin:0 auto; background:var(--white);
     border:1px solid var(--rose-soft); border-radius:16px;
-    padding:44px 40px;
+    padding:44px 40px; overflow:hidden;
   }
-  .pricing-card-top{
-    display:flex; justify-content:space-between; align-items:baseline;
-    flex-wrap:wrap; gap:10px 20px; margin-bottom:18px;
+  .pricing-offer-banner{
+    margin:-44px -40px 26px; padding:18px 24px;
+    background:var(--orange); color:var(--cream); text-align:center;
   }
+  .offer-headline{ font-size:15px; font-weight:700; letter-spacing:0.01em; margin-bottom:6px; }
+  .offer-price{ font-family:'Fraunces', serif; font-size:16px; }
+  .offer-price .old-price{ text-decoration:line-through; opacity:0.75; margin-right:8px; font-weight:400; }
+  .offer-price .new-price{ font-weight:600; font-size:19px; }
+  .pricing-card-top{ margin-bottom:18px; }
   .pricing-card-top h3{
     font-family:'Fraunces', serif; font-weight:500; font-size:22px; margin:0;
-  }
-  .pricing-amount{
-    font-family:'Fraunces', serif; font-weight:600; font-size:28px;
-    color:var(--orange); white-space:nowrap;
-  }
-  .pricing-amount .from{
-    font-family:'Inter', sans-serif; font-weight:500; font-size:14px;
-    color:var(--muted); margin-right:4px;
   }
   .pricing-desc{ font-size:15.5px; color:var(--muted); line-height:1.65; margin:0 0 28px; }
   .pricing-included{ list-style:none; margin:0; padding:0; display:grid; gap:14px; }
@@ -273,8 +270,7 @@
   }
   @media (max-width:600px){
     .pricing-card{ padding:32px 24px; }
-    .pricing-card-top{ flex-direction:column; align-items:flex-start; }
-    .pricing-amount{ font-size:25px; }
+    .pricing-offer-banner{ margin:-32px -24px 22px; }
   }
 
   /* ============ CTA ============ */
@@ -585,9 +581,12 @@
     </div>
 
     <div class="pricing-card">
+      <div class="pricing-offer-banner">
+        <div class="offer-headline">Limited-time offer: 10% off for new clients</div>
+        <div class="offer-price"><span class="old-price">$647</span> <span class="new-price">$582.30 USD</span></div>
+      </div>
       <div class="pricing-card-top">
         <h3>Starter image listing package</h3>
-        <div class="pricing-amount"><span class="from">From</span> $647 USD</div>
       </div>
       <p class="pricing-desc">Seven custom images that showcase your product, explain its benefits, and answer shoppers' key questions, all in your brand's style.</p>
       <ul class="pricing-included">
